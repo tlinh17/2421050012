@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Name</title>
+    <link rel='stylesheet' href='name.css'>
+    <style>
+        h2{
+            color: red;
+            background-color: white;
+        }
+
+        .khoi-1{
+            background-color:red;
+        }
+
+        .khoi-2{
+            background-color:green;
+            /* margin truyền 1 giá trị thì sẽ cách
+            xung quanh = giá trị đó */
+            /* 2 giá trị: Giá trị đầu (trên dưới), giá trị 2 (trái phải) */
+            /* 4 giá trị: Thứ tự trên phải dưới trái (theo chiều kim đồng hồ) */
+            margin: 10px 50px 100px 200px;
+        }
+
+        .khoi-3{
+            background-color:blue;
+            /* padding giống margin */
+            padding: 10px 50px 100px 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- display: flex; (2 lệnh phải đi cùng nhau để nhân vật di chuyển linh hoạt)
+    justify-content: (di chuyển theo chiều ngang)
+        flex-start: di chuyển sang trái
+        flex-end: di chuyển sang phải
+        center: di chuyển về giữa
+        space-between: phân bố đều 
+        space-around: phân bố đều với khoảng cách bằng nhau, cách lề bằng nửa
+        
+    align-items: (di chuyển theo chiều dọc)
+        flex-start: di chuyển lên trên
+        flex-end: di chuyển xuống dưới
+        center: di chuyển về giữa
+        -->
+
+    <h1 style = "color: pink; background-color: blue">Nguyễn Thảo Linh</h1>    
+    <!-- Nếu là id sử dụng dấu # + tên id -->
+    <!-- ví dụ ở dưới: #tieude-1 --> 
+    <h2 id="tieude-1">Web 2</h2>
+    <!-- Nếu là class sử dụng dấu . + tên class -->
+    <!-- ví dụ ở dưới: .tieude-2 --> 
+    <h3 class="tieude-2">Web 3</h3>
+
+    <div>Web 4</div>
+    <div class="web4">Web 4</div>
+
+    <div class = "khoi-1">Khối 1</div>
+    <div class = "khoi-2">Khối 2</div>  
+    <div class = "khoi-3">Khối 3</div>
+
+
+</body>
+</html>
