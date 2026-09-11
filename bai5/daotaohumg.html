@@ -4,72 +4,471 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Đào tạo HUMG</title>
-    <Style>
+    <!-- <Style>
         body{
-        margin: 0px;
-        }
-        .menu{ 
-            background-color: #2fa4e7;
             margin: 0px;
-           
         }
-        .danh-sach-muc{ 
+
+        .danh-muc{ 
+            background-color: #2fa4e7;  
+        }
+
+        .danh-sach-danh-muc{ 
             /*bỏ dấu chấm của list*/
             list-style:none;
             margin: 0px;
             display: flex;
+            padding :10px
+            /* set các đối tượng bọc ở vị trí trong khối tự động
+            cách nhau khoảng cách = giá trị truyền vào */
+            gap: 15px;
         }
-        .muc{
-            color: white;
-            /* font:weight= bold; */
-            padding: 15px;
-        }
-        a{
+
+        .lien-ket-muc{
             /* để bỏ gạch chân của thẻ a dùng text-decoration */
             text-decoration: none;
             color: white;
         }
+        
         main{
             display: flex;
         }
+
         .khoi-trai{
-            background-color: red;
             width: 20%;
-            height: 500px;
+            height: 90vh; /* (px) */
+            /* để vẽ viền dùng border
+                border sẽ có 3 kiểu tham số (độ dày - kiểu đường viền - màu sắc) */
+            border-right: 1px solid #2fa4e7;  
         }
-        .khoi-phai{
-            background-color: blue;
-            width: 80%;
-            height: 500px;
+
+        p {
+            margin: 0px;
         }
+
+        input {
+            width: 100%;
+            padding: 5px 0;
+            border-radius:5px;
+            border:10px solid #dedede
+        }
+        
+        .khoi-dang-nhap{
+            height: 300px;  
+            width: 90%;
+            /* nếu margin để auto sẽ cân đối đối tượng ra giữa */
+            margin: 10px auto;
+        }
+
+        .quen-mk {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .lien-ket-quen-mk{
+            text-decoration: none;
+            color:#2fa4e7;
+        }
+
+        .thong-tin{
+            margin-bottom: 10px;
+        }
+
+        button{
+            width:100px;
+            padding: 5px 0;
+            margin-top:10px;
+            border-radius:5px;
+            border: 1px solid #dedede;
+            color: white;
+        }
+        
         .dang-nhap{
-            background-color: grey;
-            height: 200px;
+            background-color:#2fa4e7;
         }
-        form{
-            backg
+
+        .dang-nhap-365{
+            background-color:blue;
         }
-    </Style>
+
+        .khoi-phai{
+            width: 80%;
+            height: 90vh; /* (vh) */
+        }
+        
+        .tin{
+            width:95%;
+            height: 300px;
+            margin: 20px auto;
+            border: 1px solid #2fa4e7;
+            border-radius: 10px;
+        }
+
+        .tin-tren{
+            width:95%;
+            margin: auto;
+            border-bottom: 1px solid #2fa4e7;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        h3{
+            margin: 0;
+        }
+
+        .danh-sach-tin{
+            width: 95%;
+            margin:auto;
+            padding:10px;
+            display:flex;
+        }
+
+        .bai-viet{
+            width:25%;
+            margin-right:20px;
+        }
+
+        .bai-viet-khoi-anh{
+            width:100%;
+        }
+
+        .bai-viet-thoi-gian{
+            display:flex;
+            justiify-content: flex-end;
+        }
+
+        img{
+            width:100%
+            height: 20vh;
+            border-radius:10px;
+        }
+
+        .xem-tiep{
+            color:#2fa4e7;
+            text-decoration: none;
+        }
+    </Style> -->
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .danh-muc {
+            background-color: #2fa4e7;
+        }
+
+        .danh-sach-danh-muc {
+            list-style: none;
+            margin: 0;
+            display: flex;
+            padding: 10px;
+            /* set các đối tượng bọc ở trong khối tự động cách
+                    nhau khoảng cách = giá trị truyền vào */
+            gap: 15px;
+        }
+
+        .lien-ket-muc {
+            text-decoration: none;
+            color: white;
+        }
+
+        main {
+            display: flex;
+        }
+
+        .khoi-trai {
+            width: 20%;
+            height: 90vh;
+            /* để vẽ viền dùng border
+                        border sẽ có 3 tham số (độ dày - loại đường viền - màu sắc)
+                    */
+            border-right: 1px solid #2fa4e7;
+        }
+
+        p {
+            margin: 0px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 0;
+            border-radius: 5px;
+            border: 2px solid #dedede;
+        }
+
+        .khoi-dang-nhap {
+            width: 90%;
+            height: 300px;
+            /* nếu margin để auto sẽ căn đối tượng ra giữa*/
+            margin: 10px auto;
+        }
+
+        .quen-mk {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .lien-ket-quen-mk {
+            text-decoration: none;
+            color: #2fa4e7;
+        }
+
+        .thong-tin {
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px 0;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #dedede;
+            color: white;
+        }
+
+        .dang-nhap {
+            background-color: #2fa4e7;
+        }
+
+        .dang-nhap-365 {
+            background-color: #0078D4;
+        }
+
+        .khoi-phai {
+            width: 80%;
+            height: 90vh;
+        }
+
+        .tin {
+            width: 95%;
+            height: 300px;
+            margin: 20px auto;
+            border: 1px solid #2fa4e7;
+            border-radius: 10px;
+        }
+
+        .tin-tren {
+            width: 95%;
+            margin: auto;
+            border-bottom: 1px solid #2fa4e7;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        .danh-sach-tin {
+            width: 95%;
+            margin: auto;
+            padding: 10px;
+            display: flex;
+        }
+
+        .bai-viet {
+            width: 25%;
+            margin-right: 20px;
+        }
+
+        .bai-viet-khoi-anh {
+            width: 100%;
+        }
+
+        .bai-viet-thoi-gian {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        img {
+            width: 100%;
+            height: 20vh;
+            border-radius: 10px;
+        }
+
+        .xem-tiep {
+            color: #2fa4e7;
+            text-decoration: none;
+        }
+
+        .chu{
+            width: 50%
+        }
+
+        .tb-chu{
+            margin: auto;
+            border-bottom: 1px solid grey;
+            display: flex;
+        }
+    </style>
 </head>
 <body>
     
     <!-- Thanh menu  -->
-    <nav class="menu">
-        <ul class="danh-sach-muc">
-            <li class="muc"><a href="#">Thực tập, đồ án</a></li>
-            <li class="muc"><a href="#">Thủ tục Một cửa</a></li>
-            <li class="muc"><a href="#">Một Cửa online</a></li>
-            <li class="muc"><a href="#">E-mail HUMG</a></li>
+    <nav class="danh-muc">
+        <ul class="danh-sach-danh-muc">
+            <li class="muc"><a class="lien-ket-muc" href="#">Thực tập, đồ án</a></li>
+            <li class="muc"><a class="lien-ket-muc" href="#">Thủ tục Một cửa</a></li>
+            <li class="muc"><a class="lien-ket-muc" href="#">Một Cửa online</a></li>
+            <li class="muc"><a class="lien-ket-muc" href="#">E-mail HUMG</a></li>
         </ul>
     </nav>
     <!-- Nội dung chính -->
     <main>
-        <div class="khoi-trai">Trái</div>
-            <div>
+        <div class="khoi-trai">
+            <div class="khoi-dang-nhap">       
                 <form action="">
+                    <div class="thong-tin">
+                        <p>Tài khoản</p>
+                        <input type ="text">
+                    </div>
                     
+                    <div class="thong-tin">
+                        <p>Mật khẩu</p>
+                        <input type ="password">
+                    </div>
+
+                    <div class="quen-mk">
+                        <i>
+                            <a class="lien-ket-quen-mk" href ="#">Quên mật khẩu</a>
+                        </i>
+                    </div>
+
+                    <div class="chuc-nang-dang-nhap">
+                        <button class="dang-nhap">Đăng nhập</button>
+                        <button class="dang-nhap-365">Đăng nhập với Microsorf office 365</button>
+                    </div>
+
+                </form>  
+            </div>   
+            
+        </div>   
+        <div class="khoi-phai">
+            <div class="tin">
+                <div class="tin-tren">
+                    <h3 class="tieu-de">Tin tức</h3>
+                    <p>
+                        <a class="xem-tiep" href="">Xem tiếp ></a>
+                    </p>
+                </div>
+                <!-- Danh sách tin -->
+                <div class="danh-sach-tin">
+                    <div class="bai-viet">
+                        <div class="bai-viet-khoi-anh">
+                            <img src="../images/no_img.jpg" alt="">
+                        </div>
+                        <div class="bai-viet-thoi-gian">
+                            <p>05/05/2026</p>
+                        </div>
+                        <div>
+                            <p>Về việc đăng ký khối lượng học tập học kỳ phụ năm học 2025-2026</p>
+                        </div>
+                    </div>
+                    <div class="bai-viet">
+                        <div class="bai-viet-khoi-anh">
+                            <img src="../images/no_img.jpg" alt="">
+                        </div>
+                        <div class="bai-viet-thoi-gian">
+                            <p>05/05/2026</p>
+                        </div>
+                        <div>
+                            <p>Về việc đăng ký khối lượng học tập học kỳ phụ năm học 2025-2026</p>
+                        </div>
+                    </div>
+                    <div class="bai-viet">
+                        <div class="bai-viet-khoi-anh">
+                            <img src="../images/no_img.jpg" alt="">
+                        </div>
+                        <div class="bai-viet-thoi-gian">
+                            <p>05/05/2026</p>
+                        </div>
+                        <div>
+                            <p>Về việc đăng ký khối lượng học tập học kỳ phụ năm học 2025-2026</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        <div class="khoi-phai">Phải</div>
+
+           
+           
+           
+           
+           
+            <!-- Thông báo -->
+            <div class="tin">
+                <div class="tin-tren">
+                    <h3 class="tieu-de">Thông báo</h3>
+                    <p>
+                        <a class="xem-tiep" href="">Xem tiếp ></a>
+                    </p>
+                </div>
+            
+                <!-- Danh sách thông báo -->
+                <div class="danh-sach-tin">
+                    <div class="bai-viet">
+                        <div class="bai-viet-khoi-anh">
+                            <img src="../images/1.webp" alt="">
+                        </div>
+                        <div class="bai-viet-thoi-gian">
+                            <p>27/08/2026</p>
+                        </div>
+                        <div>
+                            <p>Về việc ghép lớp và mở lớp học kì 1 năm học 2026-2027</p>
+                        </div>
+                    </div>
+
+                    <div class="bai-viet">
+                        <div class="bai-viet-khoi-anh">
+                            <img src="../images/2.jpg" alt="">
+                        </div>
+                        <div class="bai-viet-thoi-gian">
+                            <p>24/08/2026</p>
+                        </div>
+                        <div>
+                            <p>Thông báo về việc nghỉ học nhân dịp Quốc khánh 2/9</p>
+                        </div>
+                    </div>
+
+                    <div class="chu">
+                        <div class="tb-chu">
+                            <p>Thông báo về việc thực tập tốt nghiệp/doanh nghiệp và Đồ án/khóa luận tốt nghiệp của sinh viên đợt 1A năm học 2026-2027</p>
+                            <p>11/08/2026</p>
+                        </div>
+                    </div>
+                
+                </div>
+
+                
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            <!-- Hướng dẫn -->
+            <div class="tin">
+                <div class="tin-tren">
+                    <h3 class="tieu-de">Hướng dẫn</h3>
+                    <p>
+                        <a class="xem-tiep" href="">
+                            Xem tiếp >
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+
+        
+        
+        
+        
+        
+        </div>
     </main>
 </body>
 </html>
