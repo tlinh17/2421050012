@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+}
+header{
+    display:flex;
+    justify-content: space-between;
+    padding: 0 70px;
+    align-items: center;
+    background-color:black
+}
+.danh-sach-danh-muc{
+    display:flex;
+    
+    background-color: red;
+    gap: 3px;
+}
+
+.muc{
+}

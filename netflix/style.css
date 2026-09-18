@@ -1,0 +1,114 @@
+body{
+    background-color:#1c1b20;
+    color:white;
+    margin:0;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    background-color: black;
+}
+
+.danh-sach-muc{
+    list-style: none;
+    display:flex;
+    gap: 10px;
+    padding:0;
+}
+
+.lien-ket-muc{
+    text-decoration: none;
+    color:#BCBBBF;
+}
+
+.dang-chon{
+    background-color:#4C4B51;
+    color:white;
+}
+
+.muc{
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.logo{
+    width: 5%;
+}
+
+.avata{
+    width: 40px;
+    border-radius: 10px;
+}
+
+.muc:hover{
+    background-color: grey;
+}
+
+.banner{
+    width:95%;
+    margin: 20px auto;
+}
+
+.banner-img{
+    width:100%;
+    border-radius: 20px;
+}
+
+.the-loai{
+    width:95%;
+    height:20vh;
+    /* background-color: red; */
+    /* trên dưới 10px, trái phải auto */
+    margin: 10px auto;
+}
+
+.danh-sach-phim{
+    /* width:90%; */
+    display:flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.phim{
+    width: 19%;
+    height: 20vh;
+    img{
+        height: 20vh;
+        width:100%;
+        border-radius: 20px;
+    }
+}
+
+.tac-pham{
+    width:95%;
+    height:20vh;
+    margin:10vh auto;
+}
+
+.dong-vat{
+    width:95%;
+    height:20vh;
+    margin:10vh auto;
+}
+
+.pho-bien{
+    width:95%;
+    height:20vh;
+    margin:10vh auto;
+}
+
+.nhan-vat{
+    width:95%;
+    height:20vh;
+    margin:10vh auto;
+
+        .img{
+            width:50%;
+            height:50%;
+            border-radius: 50%;
+        }
+}
+
