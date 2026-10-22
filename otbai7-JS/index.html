@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+</head>
+<body>
+    <script>
+        1.có thể thêm html vào nhưng phải đặt trong dấu " "
+        2. vd chuỗi
+
+        var namSinh = 2006;
+        var truongHoc = "Mỏ - Địa chất"'
+        document.writeln(namSinh + "<br>" + truongHoc + "<br>");
+
+        // + - * / %(chia lấy phần dư)
+
+        // ++ -- tăng 1, giảm 1
+        // thêm ++ đằng trước giá trị mới tăng hoặc giảm
+
+        // += -= *= %=
+        //tương đương: namSinh = namSinh + truongHoc
+                    namSinh = namSinh - truongHoc
+        namSinh += truongHoc;
+
+        //kiểu dữ liệu: String, Number, boolean (true/false)
+
+        var a = 10;
+        var b = 5;
+        //chuyển string -> number dùng: parseInt()
+        var tong = parseInt(a) + parseInt(b);
+        document.writeln("<br>");
+        document.writeln("Tổng là:" + tong);
+        //chuyển String -> Số thực dùng: parseFloat();
+        // var a = 10; var b = 5.5;
+        // var tong = parseInt(a) + parseFloat(b);
+        //...
+
+        // kiểm tra độ dài chuỗi: .length (tính cả space)
+        document.writeln("<br>");
+        document.writeln(truongHoc.length);
+
+        //nối chuỗi dùng +
+
+        //kiểm tra tồn tại
+        //.indexOf: tìm vị trí xuất hiện đầu tiên (có -vị trí / k -1)
+        document.writeln("<br>");
+        document.writeln(truongHoc.indexOf('M'));
+
+        //.includes kiểm tra xem từ có nằm trong chuỗi k (có: true, k: false)
+
+        //.replace thay thế chuỗi
+        //c1: hiện giá trị mới khi đã đổi
+        //  document.writeln(truongHoc.replace("Mỏ", "M"))
+        //c2: gán lại giá trị biến
+        //  truongHoc = truongHoc.replace("Mỏ", "M");
+        //  document.writeln(truogHoc.replace("Mỏ", "m")); hiển thị giá trị thay đôiir
+
+        //kiểm tra kí tự bắt đầu: .startWith
+        //In hoa: toUpperCase
+        //In thường: toLowerCase
+
+        //date
+        var homNay = new Date;
+        document.writeln("<br>");
+        document.writeln(homNay);
+
+        //cụ thể ngày tháng năm nào
+        var ngay = new Date(10/09/2026);
+        document.writeln("<br>");
+        document.writeln(ngay);
+
+        //var ngay/thang/... = homNay.get...();
+        //lấy năm: .getFullYear();
+        //lấy tháng: .getMonth();
+        //lấy ngày: .getDate();
+        //thứ: .getDay() + 1;
+
+        //Mảng(array)
+        var mangSo = [1,2,3,4,5];
+        var mangTen = ["Thuy", "Mai", "Tuan"];
+        var thongTin = ["Thuy", 21, false];
+
+        document.writeln("<br>");
+        document.writeln(mangSo[3]); //tính từ 0, tức lấy số 4
+
+        //kiểm tra độ dài mảng: .length
+
+        //gộp mảng: .concat
+        document.writeln("<br>");
+        var mang = mangSo.concat(mangTen,thongTin);
+        document.writeln(mang);
+
+        //.join("-") thêm - vào dãy
+        //.pop() lấy ra số cuối cùng
+
+        //.push() thêm thì phải khai báo r mới thêm
+        //mangSo.push(6);
+        //...
+
+        //.reverse() đảo chiều dãy
+
+        //== so sánh bằng
+        // > < >= <=
+        // && || và và hoặc
+        // t & t = t
+        // t & f = f
+        // f & f =?
+
+        // t || f 1 trong 2 đúng = t
+
+
+
+    </script>
+    
+</body>
+</html>

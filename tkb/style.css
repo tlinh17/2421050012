@@ -1,0 +1,204 @@
+body{
+    margin:0;
+}
+
+.danh-muc{
+    background-color:#2fa4e7;
+}
+
+.danh-sach-danh-muc{
+    list-style: none;
+    display: flex;
+    gap: 27px;
+    color: white;
+    font-size: 17px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color:#2fa4e7;
+    width: 100%;
+    align-items: center;
+    height: 56px;
+}
+
+.avata{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* margin-top: 5px; */
+}
+
+.danh-sach-ttin{
+    padding-left: 6px;
+    /* margin-top: 8px; */
+    color:white;
+}
+
+.lien-ket-danh-muc{
+    color: #fff;
+    text-decoration:none;
+}
+
+.ttin{
+    display: flex;
+    margin-right: 50px;
+    align-items: center;
+}
+
+main{
+    display:flex;
+}
+
+.danh-sach-ttin{
+    list-style: none;
+}
+
+.trai{
+    width: 21%;
+    height: 200vh;
+    border-right:2px solid #2fa4e7;
+}
+
+.phai{
+    width: 79%;
+    height: 215vh;
+}
+
+.tkb{
+    margin: 15px 10px 20px 10px;
+    height: 155vh ;
+    width: 97.8%;
+    background-color:white;
+    border-radius: 10px;
+    border: 1px solid #2fa4e7;
+}
+
+.tkb-tren{
+    margin: 0px 15px 0px 15px;
+    padding: 5px;
+    border-bottom: 1px solid #2fa4e7;
+}
+
+h3{
+    margin:5px;
+}
+
+.chon-1{
+    border-radius: 10px solid #495057;
+    /* border-color:#495057; */
+    margin-left: 1px;
+}
+
+.dong-1{
+    display: flex;
+    /* color:#495057; */
+    margin: 15px;
+    gap: 10px;
+}
+
+.kvn{
+    padding: 5px;
+        /* color:#495057; */
+    width: 41vh;
+
+}
+
+.dong-2{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin: 15px;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.dong-2-phai{
+    gap: 15px;
+    display: flex;
+    align-items: center;
+        button{
+            font-size: 16px;
+            border-radius: 5px;
+            width: 10vh;
+            height: 5vh;
+            background-color:white;
+            border: 1px solid #2fa4e7;
+            color:#2fa4e7;
+        }
+
+        .in{
+            text-decoration: none;
+            color:#2fa4e7;
+        }
+
+        .note{
+            display:flex;
+            align-items: center;
+            gap: 4px;
+        }
+}
+
+.kvn-2{
+    padding: 5px;
+    /* color:#495057; */
+    width: 52vh;
+}
+
+select{
+    font-size:17px;
+    border-radius: 5px;
+    height: 5.5vh;
+    color:#495057;
+}
+
+.dong-2-trai{
+    select{
+        width: 94.5vh;
+        padding: 5px;
+    }
+}
+
+.bangtkb{
+    width: 99.5%;
+    margin-left: 6px;
+    margin-top: 28px;
+    
+}
+.bangb{
+    width: 98%;
+    margin-left: 10px;
+    height: 110vh;
+    border-collapse: collapse;
+
+}
+table {
+    width: 98%;
+    height: 120vh;
+    width: 100%;
+    /* border-collapse: collapse; */
+    /* border-radius:1px; */
+    /* border: 1px solid #495057; */
+
+}
+
+
+.tiet{
+    background-color:#2fa4e7;
+    color: #ffffff;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mon{
+    background-color:#cfe2ff;
+    border: 2px solid #2fa4e7;
+    padding-bottom: 3px solid #2fa4e7;
+}
+
+
+
+

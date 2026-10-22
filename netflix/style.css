@@ -15,7 +15,7 @@ header{
 .danh-sach-muc{
     list-style: none;
     display:flex;
-    gap: 10px;
+    gap: 6px;
     padding:0;
 }
 
@@ -78,7 +78,7 @@ header{
     img{
         height: 20vh;
         width:100%;
-        border-radius: 20px;
+        border-radius: 10px;
     }
 }
 
@@ -105,10 +105,26 @@ header{
     height:20vh;
     margin:10vh auto;
 
-        .img{
-            width:50%;
-            height:50%;
-            border-radius: 50%;
+        
+}
+
+.nv{
+    width: 20vh;
+    height: 20vh;
+    img{
+        width:20vh;
+        height:20vh;
+        border-radius: 50%;
         }
 }
 
+.danh-sach-note{
+    display:flex;
+    /* justify-content: center; */
+    /* margin: auto; */
+    gap: 10px;
+    margin: 3px 50px 20px 40vh;
+    p{
+        color:grey;
+    }
+}
