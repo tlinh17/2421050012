@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OT89-JS</title>
+</head>
+<body>
+    <div>
+        Họ và tên: <input type="text" id="hoVaTen">
+    </div>
+    <div>
+        <button onclick="xinChao()">Xin chào</button>
+    </div>
+    <div>
+        Kết quả: <input type="text" id="ketQua">
+    </div>
+
+    <h1>Tính tổng</h1>
+    <div>
+        Số thứ nhất: <input type="number" id="soThuNhat">
+    </div>
+    <div>
+        Số thứ hai: <input type="number" id="soThuHai">
+    </div>
+    <div>
+        <button onclick="tinhTong()">Tổng</button>
+    </div>
+    <div>
+        Kết quả: <input type="number" id="tong">
+    </div>
+
+
+    <script>
+        //Xinchao
+        function xinChao() {
+            var ten = document.getElementById("hoVaTen").value;
+            document.getElementById("ketQua").value = "Xin chào " + ten;
+        }
+        xinChao();
+
+        //Tính tổng
+        function tinhTong() {
+            var soThuNhat = document.getElementById("soThuNhat").value;
+            var soThuHai = document.getElementById("soThuHai").value;
+            var tong2so = parseFloat(soThuNhat) + parseFloat(soThuHai);
+            document.getElementById("tong").value = tong2so;
+        }
+
+        //Xin chào + tên + tuổi
+        function xinChao2(ten,tuoi){
+            document.write("Xin chào " + ten + " " + tuoi);
+        }
+        xinChao2("linh",20);
+
+        //Tạo hàm tính chu vi hình chữ nhật
+        document.write("<br>");
+        function chuVi(chieuDai,chieuRong) {
+            var chuViHinh = (chieuDai + chieuRong)*2;
+            document.write("Chu vi hình chữ nhật là: " + chuViHinh);
+        }
+        chuVi(20,15);;
+    </script>
+</body>
+</html>

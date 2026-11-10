@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Đào tạo HUMG</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .danh-muc {
+            background-color: #2fa4e7;
+        }
+
+        .danh-sach-danh-muc {
+            /*bỏ dấu chấm của list*/
+            list-style: none;
+            margin: 0;
+            display: flex;
+            padding: 10px;
+            /* set các đối tượng bọc ở trong khối tự động cách
+                    nhau khoảng cách = giá trị truyền vào */
+            gap: 15px;
+        }
+
+        .lien-ket-muc {
+            /* để bỏ gạch chân của thẻ a dùng text-decoration */
+            text-decoration: none;
+            color: white;
+        }
+
+        main {
+            display: flex;
+        }
+
+        .khoi-trai {
+            width: 20%;
+            height: 173vh;
+            /* để vẽ viền dùng border
+                border sẽ có 3 tham số (độ dày - loại đường viền - màu sắc)
+            */
+            border-right: 2px solid #2fa4e7;
+        }
+
+        p {
+            margin: 0px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 0;
+            border-radius: 5px;
+            border: 2px solid #dedede;
+        }
+
+        .khoi-dang-nhap {
+            width: 90%;
+            height: 300px;
+            /* nếu margin để auto sẽ căn đối tượng ra giữa*/
+            margin: 10px auto;
+        }
+
+        .quen-mk {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .lien-ket-quen-mk {
+            text-decoration: none;
+            color: #2fa4e7;
+        }
+
+        .thong-tin {
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px 0;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #dedede;
+            color: white;
+        }
+
+        .dang-nhap {
+            background-color: #2fa4e7;
+        }
+
+        .dang-nhap-365 {
+            background-color: #0078D4;
+        }
+
+        .khoi-phai {
+            width: 80%;
+            height: 100vh;
+        }
+
+        .tin {
+            width: 95%;
+            height: 300px;
+            margin: 20px auto;
+            border: 1px solid #2fa4e7;
+            border-radius: 10px;
+        }
+
+        .tin-tren {
+            width: 98%;
+            margin: 0 auto;
+            border-bottom: 1px solid #2fa4e7;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 1px ;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        .danh-sach-tin {
+            /* width: 97.8%; */
+            margin: 1px 2px 10px 15px;
+            padding: 10px;
+            display: flex;
+            padding: 12px 0 50px 0;
+            
+        }
+
+        .bai-viet {
+            width: 25%;
+            margin-right: 20px;
+            padding: 0px 0 30px 0;
+        }
+
+        .bai-viet-khoi-anh {
+            width: 100%;
+        }
+
+        .bai-viet-thoi-gian {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        img {
+            width: 100%;
+            height: 20vh;
+            border-radius: 10px;
+        }
+
+        .xem-tiep {
+            color: #2fa4e7;
+            text-decoration: none;
+        }
+
+        .chu{
+            padding: 7px 7px 7px 10px ;
+            width: 48%;
+            border-left: 1px solid rgba(0, 0, 0, 0.125);
+            /* justify-content:center; */
+            /* margin-right: 0px */
+        }
+
+        .tb-chu{
+            margin: 7px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+            display: flex;
+            padding: 7px;
+            justify-content:space-between;
+        }
+
+        .tb-chu-1{
+            margin: 7px;
+            display: flex;
+            padding: 5px;
+            justify-content:space-between; 
+        }
+
+        .cai-dat{
+            width: 95%;
+            height: 170px;
+            margin: 20px auto;
+            border: 1px solid #2fa4e7;
+            border-radius: 10px;
+        }
+
+        .app{
+            height: 15vh;
+            width: max-content;
+            margin-top: 12px;
+            margin-bottom: 12px;  
+        }
+
+        .app-tong {
+            display:flex;
+            justify-content:space-around;
+        }
+        
+       
+        .khoi-trai-giua{
+            color:#2fa4e7;
+            list-style:none;
+            text-decoration: none;
+            padding-left: 0px;
+            padding-right: 3px;
+        }
+
+        .tren{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-bottom:1px solid #2fa4e7;  
+            background-color: color-mix(in srgb, #2fa4e7 20%, white);
+        }
+
+       .duoi{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-bottom:1px solid #2fa4e7;  
+       }
+
+       .chu-duoi{
+            padding-left: 22%;
+       }
+
+       .khoi-trai-duoi{
+            margin-top:65%;
+            display: flex;
+            flex-direction: column;
+       }
+
+       .duoi-1{
+            font-size: 12px;
+            padding-left: 10%;
+            color:#495057;
+       }
+
+       .duoi-2{
+            font-size: 15px;
+            padding-left: 7%;
+       }
+       
+    </style>
+</head>
+<body>
+    
+    <!-- Thanh menu  -->
+    <nav class="danh-muc">
+        <ul class="danh-sach-danh-muc">
+            <li class="muc"><a class="lien-ket-muc" href="#">Thực tập, đồ án</a></li>
+            <li class="muc"><a class="lien-ket-muc" href="#">Thủ tục Một cửa</a></li>
+            <li class="muc"><a class="lien-ket-muc" href="#">Một Cửa online</a></li>
+            <li class="muc"><a class="lien-ket-muc" href="#">E-mail HUMG</a></li>
+        </ul>
+    </nav>
+    <!-- Nội dung chính -->
+    <main>
+        <div class="khoi-trai">
+            <div class="khoi-dang-nhap">       
+                <form action="">
+                    <div class="thong-tin">
+                        <p>Tài khoản</p>
+                        <input type ="text">
+                    </div>
+                    
+                    <div class="thong-tin">
+                        <p>Mật khẩu</p>
+                        <input type ="password">
+                    </div>
+
+                    <div class="quen-mk">
+                        <i>
+                            <a class="lien-ket-quen-mk" href ="#">Quên mật khẩu</a>
+                        </i>
+                    </div>
+
+                    <div class="chuc-nang-dang-nhap">
+                        <button class="dang-nhap">Đăng nhập</button>
+                        <button class="dang-nhap-365">Đăng nhập với Microsorf office 365</button>
+                    </div>
+                </form>  
+                <!-- Khối trang chủ -->
+                <nav>
+                    <ul class="khoi-trai-giua">
+                        <li class="tren">
+                            <div>
+                                <a href="" style="color:#2fa4e7; text-decoration: none;">
+                                    <p>Trang chủ</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="duoi">
+                            <div>
+                                <a href="" style="color:#2fa4e7; text-decoration: none;">
+                                    <p>Khảo sát đánh giá</p>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Khối logo -->
+                <div class="khoi-trai-duoi">
+                    <div>
+                        <img src="../images/8.jpg" alt="" style="height: auto; width: 75%; padding-left: 12%;">
+                    </div>
+                    <div class="chu-duoi">
+                        <p class="duoi-1"><b>MOHN-V 2026.08F.29</b></p>
+                        <p class="duoi-2">
+                            <font color="#495057">Design by</font><font color="#2fa4e7"><a href="https://aqtech.vn/" alt="" style="text-decoration: none; color:#2fa4e7"> aqtech.vn</a></font>
+                        </p>
+                    </div>
+                </div>
+            </div>      
+        </div>   
+         
+        <!-- Khối phải -->
+        <div class="khoi-phai">
+            <div class="tin">
+                <div class="tin-tren">
+                    <h3 class="tieu-de">Tin tức</h3>
+                    <p>
+                        <a class="xem-tiep" href="">Xem tiếp ></a>
+                    </p>
+                </div>
+                <!-- Danh sách tin -->
+                <div class="danh-sach-tin">
+                    <div class="bai-viet">
+                        <div class="bai-viet-khoi-anh">
+                            <img src="../images/no_img.jpg" alt="">
+                        </div>
+                        <div class="bai-viet-thoi-gian">
+                            <p style="color:#868e96">05/05/2026</p>
+                        </div>
+                        <div>
+                            <p>Về việc đăng ký khối lượng học tập học kỳ phụ năm học 2025-2026</p>
+                        </div>
+                    </div>
+                    <div class="bai-viet">
+                        <div class="bai-viet-khoi-anh">
+                            <img src="../images/no_img.jpg" alt="">
+                        </div>
+                        <div class="bai-viet-thoi-gian">
+                            <p style="color:#868e96">05/05/2026</p>
+                        </div>
+                        <div>
+                            <p>Về việc đăng ký khối lượng học tập học kỳ phụ năm học 2025-2026</p>
+                        </div>
+                    </div>
+                    <div class="bai-viet">
+                        <div class="bai-viet-khoi-anh">
+                            <img src="../images/no_img.jpg" alt="">
+                        </div>
+                        <div class="bai-viet-thoi-gian">
+                            <p style="color:#868e96">05/05/2026</p>
+                        </div>
+                        <div>
+                            <p>Về việc đăng ký khối lượng học tập học kỳ phụ năm học 2025-2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Thông báo -->
+            <div class="tin">
+                <div class="tin-tren">
+                    <h3 class="tieu-de">Thông báo</h3>
+                    <p>
+                        <a class="xem-tiep" href="">Xem tiếp ></a>
+                    </p>
+                </div>
+            
+                <!-- Danh sách thông báo -->
+                <div class="danh-sach-tin">
+                    <div class="bai-viet">
+                        <div class="bai-viet-khoi-anh">
+                            <img src="../images/1.webp" alt="">
+                        </div>
+                        <div class="bai-viet-thoi-gian">
+                            <p style="color:#868e96">27/08/2026</p>
+                        </div>
+                        <div>
+                            <p>Về việc ghép lớp và mở lớp học kì 1 năm học 2026-2027</p>
+                        </div>
+                    </div>
+                    <div class="bai-viet">
+                        <div class="bai-viet-khoi-anh">
+                            <img src="../images/2.jpg" alt="">
+                        </div>
+                        <div class="bai-viet-thoi-gian">
+                            <p style="color:#868e96">24/08/2026</p>
+                        </div>
+                        <div>
+                            <p>Thông báo về việc nghỉ học nhân dịp Quốc khánh 2/9</p>
+                        </div>
+                    </div>
+                    <!-- nửa còn lại -->
+                    <div class="chu">
+                        <div class="tb-chu">
+                            <p>Thông báo về việc thực tập tốt nghiệp/doanh nghiệp và Đồ án/khóa luận tốt nghiệp của sinh viên đợt 1A năm học 2026-2027</p>
+                            <p style="color:#868e96">11/08/2026</p>
+                        </div>
+                        <div class="tb-chu">
+                            <p>Về việc đăng ký khối lượng học tập học kỳ 1 năm học 2026-2027</p>
+                            <p style="color:#868e96">20/07/2026</p>
+                        </div>
+                        <div class="tb-chu-1">
+                            <p>Thông báo về việc kiểm tra điều kiện xét tốt nghiệp đợt 3 năm học 2025-2026 (Tháng 07/2026)</p>
+                            <p style="color:#868e96">16/07/2026</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+              
+            <!-- Hướng dẫn -->
+            <div class="tin">
+                <div class="tin-tren">
+                    <h3 class="tieu-de">Hướng dẫn</h3>
+                    <p>
+                        <a class="xem-tiep" href=""> Xem tiếp ></a>
+                    </p>
+                </div>
+                <!-- Danh sách hướng dẫn -->
+                <div class="danh-sach-tin">
+                    <div class="bai-viet">
+                        <div class="bai-viet-khoi-anh">
+                            <img src="../images/3.jpg" alt="">
+                        </div>
+                        <div class="bai-viet-thoi-gian">
+                            <p style="color:#868e96">18/11/2025</p>
+                        </div>
+                        <div>
+                            <p>Hướng dẫn đăng ký khối lượng học tập tại trang web</p>
+                        </div>
+                    </div>
+                    <div class="bai-viet">
+                        <div class="bai-viet-khoi-anh">
+                            <img src="../images/4.webp" alt="">
+                        </div>
+                        <div class="bai-viet-thoi-gian">
+                            <p style="color:#868e96">01/08/2023</p>
+                        </div>
+                        <div>
+                            <p>Hướng dẫn lấy lại mật khẩu trang web daotaodaihoc.humg.edu.vn</p>
+                        </div>
+                    </div>
+                    <!-- nửa còn lại -->
+                    <div class="chu">
+                        <div class="tb-chu">
+                            <p>Hướng dẫn lấy lại mật khẩu e-mail HUMG</p>
+                            <p style="color:#868e96">01/08/2023</p>
+                        </div>
+                        <div class="tb-chu">
+                            <p>Hướng dẫn đăng ký khối lượng học tập tại trang web daotaodaihoc.humg.edu.vn</p>
+                            <p style="color:#868e96">19/12/2024</p>
+                        </div>
+                        <div class="tb-chu-1">
+                            <p>Hướng dẫn kiểm tra, tra cứu trực tuyến thông tin về bằng tốt nghiệp của trường Đại học Mỏ - Địa chất</p>
+                            <p style="color:#868e96">11/05/2021</p>
+                        </div>
+                    </div>
+                
+                </div> 
+            </div>
+  
+            <!-- Cài đặt App mobile -->
+            <div class="cai-dat">
+                <div class="tin-tren">
+                    <h3 class="tieu-de">Cài đặt App mobile</h3>
+                    <p>
+                        <a class="xem-tiep" href=""> Xem tiếp ></a>
+                    </p>
+                </div>
+                <!-- App -->
+                <div class="app-tong">
+                    <div>
+                        <a href ="https://apps.apple.com/vn/app/humg-euni/id1609551784">
+                            <img src="../images/5.jpg.png" alt="" class="app">
+                        </a>
+                    </div>
+                    <div>
+                        <a href ="https://play.google.com/store/apps/details?id=com.humg_devops.humg_euni_mobile">
+                            <img src="../images/6.png" alt="" class="app">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+</body>
+</html>

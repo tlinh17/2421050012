@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 10 - JS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="trai">
+            <!-- <div class="video">
+
+            </div> -->
+            <iframe class="video" src="https://www.youtube.com/embed/5KBJU26ZQu8?si=OHsBfbUEZC2zJdAR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </div>
+
+        <div class="phai">
+            <h1>Danh sách</h1>
+            <div class="danh-sach">
+                <div onclick="chonBai(1)" class="bai-hat">
+                    <img class="anh-bai" src="./anh/nhe buong.jpg" alt="">
+                    <p>Nhẹ buông</p>
+                </div>
+                <div onclick="chonBai(2)" class="bai-hat">
+                    <img class="anh-bai" src="./anh/kmdt.jpg" alt="">
+                    <p>Khuôn mặt đáng thương</p>
+                </div>
+                <div onclick="chonBai(3)" class="bai-hat">
+                    <img class="anh-bai" src="./anh/xuong rong.jpg" alt="">
+                    <p>Xương rồng</p>
+                </div>
+                <div onclick="chonBai(4)" class="bai-hat">
+                    <img class="anh-bai" src="./anh/sofia.jpg" alt="">
+                    <p>Sofia the first</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script>
+        var danhSachVid = [
+            {
+                id: 1,
+                ten: "Nhẹ buông",
+                anh: "nhe buong.jpg",
+                linkytb: "https://www.youtube.com/embed/NbKCJtFkQ4s?si=_VRWVgzVupA1udRP",
+            },
+
+            {
+                id: 2,
+                ten: "Khuôn mặt đáng thương",
+                anh: "kmdt.png",
+                linkytb: "https://www.youtube.com/embed/HHmidNM2sOM?si=GKkT6fsrPxmu9cSk",
+            },
+
+            {
+                id: 3,
+                ten: "Xương rồng",
+                anh: "xuong rong.png",
+                linkytb: "https://www.youtube.com/embed/4jjOH2FR6-E?si=y89goCr5hVm775Sb",
+            },
+
+            {
+                id: 4,
+                ten: "Sofia the first",
+                anh: "sofia.png",
+                linkytb: "https://www.youtube.com/embed/SPgIsN0rJGM?si=AKvf50-EYQLMKtWj",
+            },
+
+        ]
+
+        function chonBai(id) {
+            for (let i = 0; i < danhSachVid.length; i++) {
+                if(danhSachVid[i].id == id) {
+                    document.getElementsByClassName("video")[0].src=danhSachVid[i].linkytb;
+                }
+                
+            }
+        }
+    </script>
+</body>
+</html>
